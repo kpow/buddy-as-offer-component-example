@@ -39,7 +39,7 @@ const demodata = {
 
 function OfferElement() {
   const { config, isLoading } = useConfig(
-    "http://localhost:50633/allstate-renters-prefill-config-react.js"
+    "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
 
   if (isLoading || !config) return null;
