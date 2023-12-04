@@ -54,7 +54,7 @@ function OfferElement() {
         data={demodata}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
-        onCustomMessage={config.handleCustomMessage}
+      // onCustomMessage={config.handleCustomMessage}
       />
     </div>
   );
