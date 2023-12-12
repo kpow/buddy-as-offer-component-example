@@ -32,7 +32,7 @@ const demodata = {
     phone: "+12242130386",
     address: {
       line1: "3516 Lincoln Way",
-      line2: "Apt. #48",
+      line2: "Apt 48",
       city: "Ames",
       state: "IA",
       postalCode: "50014"
