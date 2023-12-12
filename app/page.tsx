@@ -19,7 +19,7 @@ const demodata = {
         line1: "",
         line2: "",
         postalCode: "",
-        state: "",
+        state: "IL",
         city: ""
       }
     }
