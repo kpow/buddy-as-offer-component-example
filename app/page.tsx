@@ -16,11 +16,11 @@ const demodata = {
     startDate: "12/30/2023",
     renters: {
       address: {
-        line1: "8226 S Langley Ave",
+        line1: "",
         line2: "",
-        postalCode: "60619",
-        state: "IL",
-        city: "Chicago"
+        postalCode: "",
+        state: "IA",
+        city: ""
       }
     }
   },
