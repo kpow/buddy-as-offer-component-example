@@ -95,12 +95,13 @@ function OfferElement() {
   return (
     <div className="App w-full">
       {/* The div the offer element loads into */}
+      <h1>production</h1>
       <div id="buddy_offer" />
 
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
-        partnerID="p-buddytest"
-        stage="STAGING"
+        partnerID="p-19g6ilex299lc"
+        stage="PRODUCTION"
         data={demodata}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
