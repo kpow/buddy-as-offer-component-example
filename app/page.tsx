@@ -63,7 +63,7 @@ function OfferElement() {
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-buddytest"
-        stage="TESTING"
+        stage="STAGING"
         data={demodata}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
