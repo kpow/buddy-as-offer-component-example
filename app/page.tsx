@@ -16,12 +16,13 @@ const demodata = {
     startDate: "12/30/2023",
     renters: {
       address: {
-        line1: "",
-        line2: "",
-        postalCode: "",
+        line1: "3516 Lincoln Way",
+        line2: "Apt 48",
+        city: "Ames",
         state: "IA",
-        city: ""
+        postalCode: "50014"
       }
+
     }
   },
   customer: {
@@ -31,50 +32,14 @@ const demodata = {
     email: "DandLJoyce@att.net",
     phone: "+12242130386",
     address: {
-      line1: "3516 Lincoln Way",
-      line2: "Apt 48",
-      city: "Ames",
-      state: "IA",
-      postalCode: "50014"
+      line1: "1261 Oak Ridge Rd",
+      line2: "",
+      postalCode: "60010",
+      state: "IL",
+      city: "Barrington"
     }
   }
 };
-
-const newData = {
-  policy: {
-    headlinePrefill: 'Prefill view headline for larger screens',
-    headlinePrefillMobile: 'Prefill view Mobile headline',
-    headlineIntro: 'Headline for larger screens',
-    headlineIntroMobile: 'Mobile headline',
-    headlineCoverages: 'We have options for you to find the right renters coverage for your needs.',
-    headlineCoveragesMobile: "We've got options for you",
-    startDate: '12/30/2023',
-    renters: {
-      address: {
-        line1: '8226 S Langley Ave',
-        line2: '',
-        postalCode: '60619',
-        state: 'IL',
-        city: 'Chicago'
-      }
-    }
-  },
-  customer: {
-    firstName: 'Jennifer',
-    lastName: 'James',
-    dob: '04/04/1990',
-    email: 'enterYourEmail@gmail.com',
-    phone: '+18049186025',
-    address: {
-      line1: '123 E Main St',
-      line2: '',
-      city: 'West Chicago',
-      state: 'IL',
-      postalCode: '60185'
-    },
-  }
-};
-
 
 
 // This is the Buddy Offer Element
