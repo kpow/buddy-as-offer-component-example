@@ -16,29 +16,31 @@ const demodata = {
     startDate: "12/30/2023",
     renters: {
       address: {
-        line1: "8226 S Langley Ave",
+        line1: "",
         line2: "",
-        postalCode: "60619",
-        state: "IL",
-        city: "Chicago"
+        postalCode: "",
+        state: "",
+        city: ""
       }
     }
   },
   customer: {
-    firstName: "Jennifer",
-    lastName: "James",
-    dob: "04/04/1990",
-    email: "enterYourEmail@gmail.com",
-    phone: "+18049186025",
+    firstName: "Dan",
+    lastName: "Joyce",
+    dob: "",
+    email: "DandLJoyce@att.net",
+    phone: "+12242130386",
     address: {
-      line1: "123 E Main St",
-      line2: "",
-      city: "West Chicago",
-      state: "IL",
-      postalCode: "60185"
+      line1: "3516 Lincoln Way",
+      line2: "Apt. #48",
+      city: "Ames",
+      state: "IA",
+      postalCode: "50014"
     }
   }
 };
+
+
 
 // This is the Buddy Offer Element
 // There are 2 main parts
