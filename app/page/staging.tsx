@@ -1,4 +1,5 @@
 'use client'
+
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
 
@@ -49,7 +50,7 @@ const demodata = {
 function OfferElement() {
   // useConfig hook to retrieve configuration options
   const { config, isLoading } = useConfig(
-    "https://embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
+    "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
 
   // This pattern holds the component in a loading state till the configuration loads.
@@ -59,13 +60,13 @@ function OfferElement() {
   return (
     <div className="App w-full">
       {/* The div the offer element loads into */}
-      <h1>production</h1>
+      <h1>staging</h1>
       <div id="buddy_offer" />
 
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
-        partnerID="p-19g6ilex299lc"
-        stage="PRODUCTION"
+        partnerID="p-buddytest"
+        stage="STAGING"
         data={demodata}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
@@ -75,7 +76,7 @@ function OfferElement() {
   );
 }
 
-export default function Home() {
+export default function Staging() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center w-full">
