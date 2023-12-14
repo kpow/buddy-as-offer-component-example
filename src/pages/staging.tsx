@@ -1,5 +1,4 @@
 'use client'
-
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
 
