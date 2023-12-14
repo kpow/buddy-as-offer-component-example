@@ -57,8 +57,8 @@ function OfferElement() {
 
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
-        partnerID="p-buddytest"
-        stage="STAGING"
+        partnerID="p-19g6ilex299lc"
+        stage="PRODUCTION"
         data={demodata}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
@@ -68,7 +68,7 @@ function OfferElement() {
   );
 }
 
-export default function Staging() {
+export default function prodNoData() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center w-full">
