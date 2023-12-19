@@ -8,27 +8,27 @@ const demodata = {
     startDate: "12/30/2023",
     renters: {
       address: {
-        line1: "3516 Lincoln Way",
-        line2: "Apt 48",
-        city: "Ames",
-        state: "IA",
-        postalCode: "50014"
+        line1: "2949 Parkwood Blvd",
+        line2: "Apt 239",
+        city: "Frisco",
+        state: "TX",
+        postalCode: "75034"
       }
 
     }
   },
   customer: {
-    firstName: "Dan",
-    lastName: "Joyce",
+    firstName: "Gautam",
+    lastName: "Sonthalia",
     dob: "",
-    email: "DandLJoyce@att.net",
-    phone: "+12242130386",
+    email: "Gautam.sonthalia@gmail.com",
+    phone: "+18473400850",
     address: {
-      line1: "1261 Oak Ridge Rd",
-      line2: "",
-      postalCode: "60010",
-      state: "IL",
-      city: "Barrington"
+      line1: "2949 Parkwood Blvd",
+      line2: "Apt 239",
+      city: "Frisco",
+      state: "TX",
+      postalCode: "75034"
     }
   }
 };
