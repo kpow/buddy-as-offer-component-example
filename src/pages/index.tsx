@@ -5,31 +5,30 @@ import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component'
 // example prefill data, makem sure the start date is in the future :)
 const demodata = {
   policy: {
-    startDate: "12/30/2023",
+    startDate: '01/30/2024',
     renters: {
       address: {
-        line1: "2949 Parkwood Blvd",
-        line2: "Apt 239",
-        city: "Frisco",
-        state: "TX",
-        postalCode: "75034"
+        line1: '3600 N Garfield St', // 3600 N Garfield St
+        line2: '',
+        postalCode: '80205',
+        state: 'CO',
+        city: 'Denver' // Denver
       }
-
     }
   },
   customer: {
-    firstName: "Gautam",
-    lastName: "Sonthalia",
-    dob: "",
-    email: "Gautam.sonthalia@gmail.com",
-    phone: "+18473400850",
+    firstName: 'Jennifer',
+    lastName: 'James',
+    dob: '04/04/1990',
+    email: 'enterYourEmail@gmail.com',
+    phone: '+18049186025',
     address: {
-      line1: "2949 Parkwood Blvd",
-      line2: "Apt 239",
-      city: "Frisco",
-      state: "TX",
-      postalCode: "75034"
-    }
+      line1: '123 E Main St',
+      line2: '',
+      city: 'West Chicago',
+      state: 'IL',
+      postalCode: '60185'
+    },
   }
 };
 
