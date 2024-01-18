@@ -5,14 +5,14 @@ import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component'
 // example prefill data, makem sure the start date is in the future :)
 const demodata = {
   policy: {
-    startDate: '01/30/2024',
+    startDate: '02/30/2024',
     renters: {
       address: {
-        line1: '3600 N Garfield St', // 3600 N Garfield St
+        line1: '3505 Barkley Rd',
         line2: '',
-        postalCode: '80205',
-        state: 'CO',
-        city: 'Denver' // Denver
+        postalCode: '29154',
+        state: 'SC',
+        city: 'Sumter'
       }
     }
   },

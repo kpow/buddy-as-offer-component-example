@@ -5,7 +5,7 @@ import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component'
 // example prefill data, makem sure the start date is in the future :)
 const demodata = {
   policy: {
-    startDate: "12/30/2023",
+    startDate: "02/30/2024",
     renters: {
       address: {
         line1: "",
