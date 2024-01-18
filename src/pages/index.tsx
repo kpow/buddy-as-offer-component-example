@@ -8,11 +8,11 @@ const demodata = {
     startDate: '02/26/2024',
     renters: {
       address: {
-        line1: '3600 N Garfield St', // 3600 N Garfield St
+        line1: '3505 Barkley Rd',
         line2: '',
-        postalCode: '80205',
-        state: 'CO',
-        city: 'Denver' // Denver
+        postalCode: '29154',
+        state: 'SC',
+        city: 'Sumter'
       }
     }
   },
