@@ -4,10 +4,10 @@ type ModalProps = {
     show: boolean;
     onClose: () => void;
     children: React.ReactNode;
-    textContent: string;
+    modalTitleContent: string
 };
 
-const Modal: React.FC<ModalProps> = ({ show, onClose, children, textContent }) => {
+const Modal: React.FC<ModalProps> = ({ show, onClose, children, modalTitleContent }) => {
     if (!show) {
         return null;
     }
@@ -15,8 +15,11 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, children, textContent }) =
     return (
         <div className="modal-overlay">
             <div className="modal">
-            {children}
-                <button onClick={onClose}>{textContent}</button>
+                <div className="modal-header">
+                    <h3>{modalTitleContent}</h3>
+                    <button onClick={onClose}>X</button>
+                </div>
+                {children}
             </div>
         </div>
     );

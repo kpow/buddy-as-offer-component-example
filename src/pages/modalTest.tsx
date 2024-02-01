@@ -61,14 +61,14 @@ import Modal from '../components/modal';
 }
 
 export default function Staging() {
-  const [currentContent, setCurrentContent] = useState<number>(1);
-  const [closeButtonContent, setCloseButtonContent] = useState<string>("Close");
+  const [currentContent, setCurrentContent] = useState<number>(0);
+
    // Function to handle continue button click
+   const continueCopy = ['Continue', 'Configure Payment', ''];
+   const modalCopy = ['Your Lease Requires Rental Insurance', 'Add Insurance to Your Lease', ''];
    const handleContinue = () => {
     setCurrentContent(currentContent + 1);
-    if(currentContent === 2) {setCloseButtonContent("Get my quotes")}
-    if(currentContent !== 3) {setCloseButtonContent("Close")}
-};
+  };
 
   const [showModal, setShowModal] = useState(true);
   const openModal = () => {
@@ -79,28 +79,28 @@ export default function Staging() {
   const closeModal = () => {
     console.log('close modal');
     setShowModal(prev => !prev);
-    setCurrentContent(1);
+    setCurrentContent(0);
   }
 
   const renderContent = () => {
     switch (currentContent) {
-      case 1:
+      case 0:
         return (
           <div>
             <p>
               <img src="https://staging.embed.buddy.insure/test/modalSlide1.png" /></p>
-              <button className='full-width-button' onClick={handleContinue}>Continue</button>
+              <button className='full-width-button' onClick={handleContinue}>{continueCopy[currentContent]}</button>
           </div>
         );
-      case 2:
+      case 1:
         return (
           <div>
             <p>
               <img src="https://staging.embed.buddy.insure/test/modalSlide2.png" /></p>
-              <button className='full-width-button' onClick={handleContinue}>Configure Payment</button>
+              <button className='full-width-button' onClick={handleContinue}>{continueCopy[currentContent]}</button>
           </div>
         );
-      case 3:
+      case 2:
         return <OfferElement />;
       default:
         return (
@@ -117,10 +117,10 @@ export default function Staging() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24" id="availBody">
       <div className="relative flex place-items-center w-full">
       <h1>staging</h1>
-            {/* <button onClick={openModal}>Open Modal</button> */}
-            <Modal show={showModal} onClose={closeModal} textContent={closeButtonContent}>
+            <Modal show={showModal} onClose={closeModal} modalTitleContent={modalCopy[currentContent]}>
               {renderContent()}
             </Modal>
+            <button onClick={openModal}>Open Modal</button>
       </div>
     </main>
   )

@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003366;
+}
+
 #availBody {
   color: rgb(var(--foreground-rgb));
   background: url('https://staging.embed.buddy.insure/test/avail-bg.png');
@@ -56,6 +62,14 @@ body {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
 }
 
 .full-width-button {
