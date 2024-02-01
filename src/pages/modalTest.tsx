@@ -87,17 +87,28 @@ export default function Staging() {
       case 0:
         return (
           <div>
-            <p>
-              <img src="https://staging.embed.buddy.insure/test/modalSlide1.png" /></p>
+              <p>You are required to get renters insurance to complete the lease process. We've partnered with Allstate to provide you with quick and hassle free insurance.</p>
+              <p className="disclaimer-copy">By selecting "CONTINUE" you authorize Avail to share your personal information (name, address, email, etc) with Allstate and its affiliates to allow it to contact you regarding insurance products and services. Avail is not a licensed insurance agent or broker and any solicitations or other communications relating to the pricing, quality or terms and conditions of insurance are being made by Allstate. You also agree to Allstate's <a href="TOC">Terms of Service</a>.</p>
               <button className='full-width-button' onClick={handleContinue}>{continueCopy[currentContent]}</button>
+              <button className="small-copy-button" onClick={closeModal}>No thanks, I'll look for insurance on my own</button>
           </div>
         );
       case 1:
         return (
           <div>
-            <p>
-              <img src="https://staging.embed.buddy.insure/test/modalSlide2.png" /></p>
+            <div className="center">
+              <p className='light-grey-bg'>Provided by Allstate</p>
+              <p className="uppercase">What's Included</p>
+              <p className='light-grey-bg'>
+                <ul>
+                  <li> $10k Personal Property</li>
+                  <li> $100k Personal Liability</li>
+                  <li>  $250 Deductible</li>
+                </ul>
+              </p>
+              </div>
               <button className='full-width-button' onClick={handleContinue}>{continueCopy[currentContent]}</button>
+              <button className="small-copy-button" onClick={closeModal}>Summary only. <a href="">Read policy here</a> for all coverages.</button>
           </div>
         );
       case 2:
@@ -120,7 +131,8 @@ export default function Staging() {
             <Modal show={showModal} onClose={closeModal} modalTitleContent={modalCopy[currentContent]}>
               {renderContent()}
             </Modal>
-            <button onClick={openModal}>Open Modal</button>
+            {/* <button onClick={openModal}>Open Modal</button>
+            number: {currentContent} */}
       </div>
     </main>
   )

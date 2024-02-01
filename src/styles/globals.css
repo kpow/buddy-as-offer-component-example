@@ -56,8 +56,10 @@ h3 {
   position: relative;
   z-index: 1000;
   width: auto;
+  text-align: center;
   display: inline-block;
   min-width: 60%;
+  max-width: 550px;
   padding: 20px;
   background-color: white;
   border-radius: 5px;
@@ -82,13 +84,68 @@ h3 {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+  font-size: 1.325rem;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  margin-top: 1rem;
 }
 
 .full-width-button:hover {
   background-color: #003366; /* Darkens the button color slightly on hover */
 }
 
+.small-copy-button {
+  width: 100%;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
+
 img {
   width: 100%;
   height: auto;
 }
+
+p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #202020;
+}
+
+.disclaimer-copy {
+  font-size: 0.95rem;
+  color: #707070;
+  background-color: #ececec;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #EAEDF1;
+  margin: 0rem auto;
+  width: 55%;
+  padding: 2%;
+}
+
+.light-grey-bg {
+  background-color: #F3F3F3;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 50%;
+}
+
+.center > p {
+  text-align: center;
+  line-height: 2.25rem;
+}
+
+ul > li::before {
+  content: url('https://staging.embed.buddy.insure/test/check-mark.png');
+}
+
