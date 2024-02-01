@@ -103,7 +103,7 @@ export default function Staging() {
                 <ul>
                   <li> $10k Personal Property</li>
                   <li> $100k Personal Liability</li>
-                  <li>  $250 Deductible</li>
+                  <li> $250 Deductible</li>
                 </ul>
               </p>
               </div>

@@ -58,8 +58,9 @@ h3 {
   width: auto;
   text-align: center;
   display: inline-block;
-  min-width: 60%;
-  max-width: 550px;
+  min-width: 550px;
+  width: 60%;
+  max-width: 650px;
   padding: 20px;
   background-color: white;
   border-radius: 5px;
