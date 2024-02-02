@@ -97,7 +97,7 @@ export default function Staging() {
         return (
           <div>
             <div className="center">
-              <p className='light-grey-bg'>Provided by Allstate</p>
+              <p className='light-grey-bg'>Provided by <img src="https://s3.amazonaws.com/staging.embed.buddy.insure/allstate/renters/Allstate-Logo-Dark.png" /></p>
               <p className="uppercase">What's Included</p>
               <p className='light-grey-bg'>
                 <ul>

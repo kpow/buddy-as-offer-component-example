@@ -140,10 +140,19 @@ p {
   padding: 10px 20px;
   width: 50%;
 }
+/* 
+.center {
+  background-image: url('https://staging.embed.buddy.insure/test/modalSlide2.png');
+} */
 
 .center > p {
   text-align: center;
   line-height: 2.25rem;
+}
+
+.center > p > img {
+  display: inline-block;
+  width: 110px;
 }
 
 ul > li::before {
