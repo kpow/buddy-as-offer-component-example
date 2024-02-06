@@ -2,17 +2,25 @@
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
 
-// example prefill data, makem sure the start date is in the future :)
+// example prefill data, make sure the start date is in the future :)
+// removing startDate, it now has a default value
 const demodata = {
   policy: {
-    startDate: '02/26/2024',
+    // startDate: '02/26/2024',
     renters: {
+      // address: {
+      //   line1: '3505 Barkley Rd',
+      //   line2: '',
+      //   postalCode: '29154',
+      //   state: 'SC',
+      //   city: 'Sumter'
+      // }
       address: {
-        line1: '3505 Barkley Rd',
+        line1: '6613 Fairpark Ave',
         line2: '',
-        postalCode: '29154',
-        state: 'SC',
-        city: 'Sumter'
+        postalCode: '45216',
+        state: 'OH',
+        city: 'Cincinnati' // Cincinnati
       }
     }
   },
@@ -31,7 +39,6 @@ const demodata = {
     },
   }
 };
-
 
 // This is the Buddy Offer Element
 // There are 2 main parts
