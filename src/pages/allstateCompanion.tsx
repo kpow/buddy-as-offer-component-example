@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 function OfferElement() {
   const router = useRouter()
-  const { firstName, lastName } = router.query
+  const { firstName, lastName, state } = router.query
   //console.log('firstName', firstName);
   const demodata = {
     policy: {
@@ -31,36 +31,7 @@ function OfferElement() {
         line1: '123 E Main St',
         line2: '',
         city: 'West Chicago',
-        state: 'IL',
-        postalCode: '60185'
-      },
-    }
-  };
-  
-  const demodataGood = {
-    policy: {
-      startDate: '02/26/2024',
-      renters: {
-        address: {
-          line1: '3505 Barkley Rd',
-          line2: '',
-          postalCode: '29154',
-          state: 'SC',
-          city: 'Sumter'
-        }
-      }
-    },
-    customer: {
-      firstName: 'Jennifer',
-      lastName: 'James',
-      dob: '04/04/1990',
-      email: 'enterYourEmail@gmail.com',
-      phone: '+18049186025',
-      address: {
-        line1: '123 E Main St',
-        line2: '',
-        city: 'West Chicago',
-        state: 'IL',
+        state: state,
         postalCode: '60185'
       },
     }
