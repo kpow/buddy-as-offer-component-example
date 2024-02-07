@@ -17,7 +17,7 @@ const ParentComponent = () => {
         {selectedState === '' ? (
           <div className="relative inline-block text-left">
             <select onChange={handleSelectionChange} value={selectedState} className="appearance-none px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
-              <option value="">Select a state</option>
+              <option value="">Please select a state</option>
               <option value="OH">Ohio</option>
               <option value="SC">South Carolina</option>
               <option value="other">Other state</option>
