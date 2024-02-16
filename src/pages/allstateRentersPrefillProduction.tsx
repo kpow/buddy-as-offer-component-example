@@ -37,37 +37,57 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
   );
 
   const checkState = (state: string) => {
-    if (state === "OH") {
-      return {
-        line1: '6613 Fairpark Ave',
-        line2: '',
-        postalCode: '45216',
-        state: 'OH',
-        city: 'Cincinnati'
-      };
-    } else if (state === "SC") {
-      return {
-        line1: '3505 Barkley Rd',
-        line2: '',
-        postalCode: '29154',
-        state: 'SC',
-        city: 'Sumter'
-      };
-    } else {
-      return {
-        line1: '6613 Fairpark Ave',
-        line2: '',
-        postalCode: '45216',
-        state: state,
-        city: 'Cincinnati'
-      };
+    switch (state) {
+        case "OH":
+            return {
+                line1: '6613 Fairpark Ave',
+                line2: '',
+                postalCode: '45216',
+                state: 'OH',
+                city: 'Cincinnati'
+            };
+        case "OK":
+            return {
+              line1: '625 Foss Dr',
+              line2: '',
+              postalCode: '73025',
+              state: 'OK',
+              city: 'Edmond'
+            };
+        case "SC":
+            return {
+                line1: '3505 Barkley Rd',
+                line2: '',
+                postalCode: '29154',
+                state: 'SC',
+                city: 'Sumter'
+            };
+        case "TN":
+            return {
+              line1: '4427 Deerland St',
+              line2: '',
+              postalCode: '38109',
+              state: 'TN',
+              city: 'Memphis'
+            };
+        default:
+            return {
+                line1: '6613 Fairpark Ave',
+                line2: '',
+                postalCode: '45216',
+                state: state,
+                city: 'Cincinnati'
+            };
     }
-  };
+};
   const rentalAddress = checkState(selectedState);
   const [formData, setFormData] = useState({
     policy: {
       renters: {
         address: rentalAddress
+      },
+      utility: {
+        companionMode: "FALSE"
       }
     },
     customer: {
