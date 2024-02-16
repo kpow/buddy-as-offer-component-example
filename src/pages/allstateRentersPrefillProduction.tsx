@@ -33,7 +33,7 @@ const initialData = {
 
 const OfferElement = ({ selectedState }: { selectedState: string }) => {
   const { config, isLoading } = useConfig(
-    "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
+    "https://embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
 
   const checkState = (state: string) => {
