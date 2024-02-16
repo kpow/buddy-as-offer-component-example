@@ -19,7 +19,9 @@ const ParentComponent = () => {
             <select onChange={handleSelectionChange} value={selectedState} className="appearance-none px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               <option value="">Please select a state</option>
               <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
               <option value="SC">South Carolina</option>
+              <option value="TN">Tennessee</option>
               <option value="other">Other state</option>
           </select>
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
