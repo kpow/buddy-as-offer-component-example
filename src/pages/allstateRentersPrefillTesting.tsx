@@ -31,13 +31,21 @@ const initialData = {
   }
 };
 
-const OfferElement = ({selectedState}: {selectedState: string}) => {
+const OfferElement = ({selectedState, selectedPartner, companionMode}: {selectedState: string, selectedPartner: string, companionMode: string}) => {
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
-
+console.log('selectedPartner', selectedPartner)
   const checkState = (state: string) => {
     switch (state) {
+        case "CA":
+            return {
+              line1: '3705 Haines St',
+                line2: '',
+                postalCode: '92109',
+                state: 'CA',
+                city: 'San Diego'
+            };
         case "OH":
             return {
                 line1: '6613 Fairpark Ave',
@@ -80,15 +88,24 @@ const OfferElement = ({selectedState}: {selectedState: string}) => {
             };
     }
 };
+const convertCompanionMode = (companionMode: string) => {
+  if (companionMode === 'True') {
+    return true;
+  } else {
+    return false;
+  }
+}
   const rentalAddress = checkState(selectedState);
+  const companionModeOverride = convertCompanionMode(companionMode)
   const [formData, setFormData] = useState({
     policy: {
+      meta: {
+        partner: selectedPartner,
+        companionMode: companionModeOverride
+      },
       renters: {
         address: rentalAddress
       },
-      utility: {
-        companionMode: "FALSE"
-      }
     },
     customer: {
       firstName: initialData.customer.firstName,
@@ -108,7 +125,8 @@ const OfferElement = ({selectedState}: {selectedState: string}) => {
 
   useEffect(() => {
     console.log('Selected state changed:', selectedState);
-  }, [selectedState]);
+    console.log('Selected partner changed:', selectedPartner);
+  }, [selectedState, selectedPartner]);
 
   // This pattern holds the component in a loading state till the configuration loads.
   if (isLoading || !config) return null;
@@ -127,18 +145,19 @@ const OfferElement = ({selectedState}: {selectedState: string}) => {
         onCustomMessage={config.handleCustomMessage}
       />
             {selectedState !== 'other' ? (
-        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Current rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode}</h1></div>
+        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Partner: {selectedPartner} / Companion Mode: {companionMode} / Rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode}</h1></div>
       ) : null}
     </div>
   );
 }
 
-export default function Staging({selectedState}: {selectedState: string}) {
+
+export default function Staging({selectedState, selectedPartner, companionMode}: {selectedState: string, selectedPartner: string, companionMode: string}) {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:w-auto mx:auto p-6 md:p-12">
       {/* <div className="relative flex place-items-center w-full"> */}
       <div className="w-full">
-        <OfferElement selectedState={selectedState} />
+        <OfferElement selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />
       </div>
     </main>
   )
