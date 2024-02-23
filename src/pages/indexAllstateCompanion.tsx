@@ -5,13 +5,13 @@ import { useRouter } from 'next/router'
 // use query string with incoming data to construct this object
 
 function OfferElement() {
-  const router = useRouter()
+  // const router = useRouter()
   //console.log('firstName', firstName);
   const demodata = {
     policy: {
       meta: {
-        partner: 'Renew',
-        companionMode: true
+        partner: 'Buddy',
+        // companionMode: false
       },
       renters: {
         address: {
@@ -51,7 +51,7 @@ function OfferElement() {
   return (
     <div className="App w-full">
       {/* The div the offer element loads into */}
-      <h1>Allstate Companion ION loads here </h1>
+      {/* <h1>Allstate Companion ION loads here </h1> */}
       <div id="buddy_offer" />
 
       <BuddyOfferElement

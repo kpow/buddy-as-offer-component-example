@@ -6,12 +6,13 @@ import { useRouter } from 'next/router'
 
 function OfferElement() {
   const router = useRouter()
-  const { firstName, lastName, state } = router.query
-  //console.log('firstName', firstName);
+  const { id } = router.query;
+  console.log('id', id);
   const demodata = {
     policy: {
       meta: {
-        partner: 'Renew',
+        partner: 'Buddy',
+        companionMode: true
       },
       renters: {
         address: {
@@ -24,8 +25,8 @@ function OfferElement() {
       }
     },
     customer: {
-      firstName: firstName,
-      lastName: lastName,
+      firstName: 'Test',
+      lastName: 'User',
       dob: '04/04/1990',
       email: 'enterYourEmail@gmail.com',
       phone: '+18049186025',
@@ -33,7 +34,7 @@ function OfferElement() {
         line1: '123 E Main St',
         line2: '',
         city: 'West Chicago',
-        state: state,
+        state: 'IL',
         postalCode: '60185'
       },
     }
@@ -55,7 +56,7 @@ function OfferElement() {
       <div id="buddy_offer" />
 
       <BuddyOfferElement
-        ion="ALLSTATE_RENTERS_PREFILL_COMPANION"
+        ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-buddytest"
         stage="TESTING"
         data={demodata}
@@ -72,6 +73,8 @@ export default function Staging() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center w-full">
         <OfferElement />
+
+        {/* Encryption id: {id} */}
       </div>
     </main>
   )
