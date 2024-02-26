@@ -6,7 +6,11 @@ import Modal from '../components/modal';
   // example prefill data, make sure the start date is in the future :)
   const demodata = {
     policy: {
-      startDate: '02/26/2024',
+      meta: {
+        partner: 'Buddy',
+        // companionMode: false
+      },
+      },
       renters: {
         address: {
           line1: '3505 Barkley Rd',
