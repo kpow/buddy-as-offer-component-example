@@ -9,7 +9,6 @@ import Modal from '../components/modal';
       meta: {
         partner: 'Renew',
         // companionMode: false
-        },
       },
       renters: {
         address: {
