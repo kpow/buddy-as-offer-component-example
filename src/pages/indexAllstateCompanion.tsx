@@ -1,12 +1,17 @@
 'use client'
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
-import { useRouter } from 'next/router'
+import React, { useEffect } from 'react';
+//import { useRouter } from 'next/router'
 // use query string with incoming data to construct this object
 
+declare global {
+  interface Window {
+    Buddy: any;
+  }
+}
+
 function OfferElement() {
-  // const router = useRouter()
-  //console.log('firstName', firstName);
   const demodata = {
     policy: {
       meta: {
@@ -68,6 +73,19 @@ function OfferElement() {
 }
 
 export default function Staging() {
+
+  useEffect(() => {
+    if (typeof window ===  'undefined') {
+      console.log('window is UNdefined');
+    }
+    // This code runs only on the client side
+    if (typeof window !== 'undefined' && window.Buddy) {
+      window.Buddy.partnerUserEvents = (payload) => {
+        console.log(payload);
+      };
+    }
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex place-items-center w-full">
