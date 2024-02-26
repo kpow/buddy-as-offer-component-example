@@ -7,9 +7,9 @@ import Modal from '../components/modal';
   const demodata = {
     policy: {
       meta: {
-        partner: 'Buddy',
+        partner: 'Renew',
         // companionMode: false
-      },
+        },
       },
       renters: {
         address: {
