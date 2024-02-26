@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import Staging from './allstateRentersPrefillTesting';
 
+declare global {
+  interface Window {
+    Buddy: any;
+  }
+}
+
 const ParentComponent = () => {
   const [selectedState, setSelectedState] = useState('');
   const [selectedPartner, setSelectedPartner] = useState('');

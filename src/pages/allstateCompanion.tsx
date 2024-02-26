@@ -8,8 +8,8 @@ import React, { useEffect } from 'react';
 
 function OfferElement() {
   const router = useRouter()
-  // const { id } = router.query;
-  // console.log('id', id);
+  const { id } = router.query;
+  console.log('id', id);
   const demodata = {
     policy: {
       meta: {
@@ -47,18 +47,28 @@ function OfferElement() {
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
 
+  interface EventData {
+    [x: string]: unknown,
+    timestamp: number,
+  }
+  interface EventObject {
+    eventType: string,
+    data: EventData,
+  }
+  
+
   useEffect(() => {
-    if (typeof window.Buddy !==  'undefined') {
-      console.log('window is defined');
-    }
     // This code runs only on the client side
-    if (typeof window !== 'undefined' && window.Buddy) {
-      console.log('FOUND window.Buddy yay');
-      window.Buddy.partnerUserEvents = (payload) => {
-        console.log('partnerUserEvents', payload);
-        // console.log(payload);
-      };
-    }
+    const intervalId = setInterval(() => {
+      if (window.Buddy) {
+        window.Buddy.partnerUserEvents = (payload: EventObject) => {
+          console.log('partnerUserEvents', payload);
+        };
+        clearInterval(intervalId);
+      }
+    }, 100); // Check every 100 milliseconds
+
+    return () => clearInterval(intervalId); // Clean up the interval
   }, []);
   
   // This pattern holds the component in a loading state till the configuration loads.

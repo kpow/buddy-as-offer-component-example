@@ -122,6 +122,7 @@ const convertCompanionMode = (companionMode: string) => {
       },
     }
   });
+
   // This pattern holds the component in a loading state till the configuration loads.
   if (isLoading || !config) return null;
 
@@ -148,19 +149,6 @@ const convertCompanionMode = (companionMode: string) => {
 
 export default function Staging({selectedState, selectedPartner, companionMode}: {selectedState: string, selectedPartner: string, companionMode: string}) {
 
-  useEffect(() => {
-    if (typeof window.Buddy !==  'undefined') {
-      console.log('window is defined');
-    }
-    // This code runs only on the client side
-    if (typeof window !== 'undefined' && window.Buddy) {
-      console.log('FOUND window.Buddy ');
-      window.Buddy.partnerUserEvents = (payload) => {
-        console.log('partnerUserEvents', payload);
-        // console.log(payload);
-      };
-    }
-  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:w-auto mx:auto p-6 md:p-12">
       {/* <div className="relative flex place-items-center w-full"> */}
