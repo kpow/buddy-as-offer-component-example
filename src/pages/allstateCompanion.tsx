@@ -2,7 +2,7 @@
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // use query string with incoming data to construct this object
 
@@ -41,7 +41,7 @@ function OfferElement() {
       },
     }
   };
-  
+
   // useConfig hook to retrieve configuration options
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
@@ -56,9 +56,7 @@ function OfferElement() {
     data: EventData,
   }
   
-
   useEffect(() => {
-    // This code runs only on the client side
     const intervalId = setInterval(() => {
       if (window.Buddy) {
         window.Buddy.partnerUserEvents = (payload: EventObject) => {
@@ -66,11 +64,11 @@ function OfferElement() {
         };
         clearInterval(intervalId);
       }
-    }, 100); // Check every 100 milliseconds
+    }, 100);
 
     return () => clearInterval(intervalId); // Clean up the interval
   }, []);
-  
+
   // This pattern holds the component in a loading state till the configuration loads.
   if (isLoading || !config) return null;
 
