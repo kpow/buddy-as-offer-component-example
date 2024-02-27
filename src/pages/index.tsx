@@ -14,15 +14,15 @@ const ParentComponent = () => {
 
   const handleStateChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedState(event.target.value);
-    console.log('SelectedState', selectedState)
+    //console.log('SelectedState', selectedState)
   };
   const handlePartnerChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedPartner(event.target.value);
-    console.log('SelectedPartner', selectedPartner)
+    //console.log('SelectedPartner', selectedPartner)
   };
   const handleCompanionModeChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setCompanionMode(event.target.value);
-    console.log('companionMode', companionMode)
+    //console.log('companionMode', companionMode)
   };
   const handleRefresh = () => {window.location.reload()}
   return (
