@@ -16,17 +16,17 @@ const initialData = {
     }
   },
   customer: {
-    firstName: 'Jennifer',
-    lastName: 'James',
+    firstName: 'Philip',
+    lastName: 'Fuentes',
     dob: '04/04/1990',
-    email: 'enterYourEmail@gmail.com',
-    phone: '+18049186025',
+    email: 'Pfuen@allstate.com',
+    phone: '+13103477028',
     address: {
-      line1: '123 E Main St',
+      line1: '645 S Lincoln St',
       line2: '',
-      city: 'West Chicago',
-      state: 'IL',
-      postalCode: '60185'
+      city: 'Kent',
+      state: 'OH',
+      postalCode: '44240'
     },
   }
 };
