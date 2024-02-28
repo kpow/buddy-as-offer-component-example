@@ -35,7 +35,7 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
   const { config, isLoading } = useConfig(
     "https://embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
-
+  const stage = "PRODUCTION";
   const checkState = (state: string) => {
     switch (state) {
         case "OH":
@@ -120,14 +120,14 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-19g6ilex299lc"
-        stage="PRODUCTION"
+        stage={stage}
         data={formData}
         theme={config.themeBase}
         onUserEvent={config.userEvents}
         onCustomMessage={config.handleCustomMessage}
       />
       {selectedState !== 'other' ? (
-        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Current rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode}</h1></div>
+        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Current rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode} / Stage: {stage}</h1></div>
       ) : null}
     </div>
   );
