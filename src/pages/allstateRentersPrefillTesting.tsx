@@ -16,7 +16,7 @@ const initialData = {
     }
   },
   customer: {
-    firstName: 'Jennifer',
+    firstName: '',
     lastName: 'James',
     dob: '04/04/1990',
     email: 'enterYourEmail@gmail.com',
@@ -99,10 +99,10 @@ const convertCompanionMode = (companionMode: string) => {
   const companionModeOverride = convertCompanionMode(companionMode)
   const [formData, setFormData] = useState({
     policy: {
-      meta: {
-        partner: selectedPartner,
-        companionMode: companionModeOverride
-      },
+      // meta: {
+      //   partner: selectedPartner,
+      //   companionMode: companionModeOverride
+      // },
       renters: {
         address: rentalAddress
       },
@@ -129,7 +129,7 @@ const convertCompanionMode = (companionMode: string) => {
   // Once we have the configuration we return the Offer Component.
   return (
     <div className="App w-full">
-      <div id="buddy_offer" />
+      {/* <div id="buddy_offer" /> */}
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-buddytest"

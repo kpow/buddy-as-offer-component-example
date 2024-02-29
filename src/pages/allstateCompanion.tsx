@@ -81,7 +81,7 @@ function OfferElement() {
       <Link href="/">
         Go home
       </Link>
-      <div id="buddy_offer" />
+      {/* <div id="buddy_offer" /> */}
         <BuddyOfferElement
           ion="ALLSTATE_RENTERS_PREFILL"
           partnerID="p-buddytest"
