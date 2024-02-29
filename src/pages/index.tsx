@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Staging from './allstateRentersPrefillTesting';
+import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -29,6 +30,9 @@ const ParentComponent = () => {
     <main className="flex min-h-screen flex-col items-center justify-between pt-12">
       <div className="relative flex place-items-center w-full">
       <div className="App w-full text-center"> 
+      <Link href="/allstateCompanion">
+        Go back
+      </Link>
       <div>
         {selectedState === "" || selectedPartner === "" || companionMode === "" ? (
           <div className="relative inline-block text-center">

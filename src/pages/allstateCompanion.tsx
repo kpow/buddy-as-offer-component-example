@@ -3,6 +3,7 @@
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 // use query string with incoming data to construct this object
 
@@ -77,17 +78,19 @@ function OfferElement() {
     <div className="App w-full">
       {/* The div the offer element loads into */}
       <h1>Allstate Companion ION loads here </h1>
+      <Link href="/">
+        Go home
+      </Link>
       <div id="buddy_offer" />
-
-      <BuddyOfferElement
-        ion="ALLSTATE_RENTERS_PREFILL"
-        partnerID="p-buddytest"
-        stage="TESTING"
-        data={demodata}
-        theme={config.themeBase}
-        onUserEvent={config.userEvents}
-        onCustomMessage={config.handleCustomMessage}
-      />
+        <BuddyOfferElement
+          ion="ALLSTATE_RENTERS_PREFILL"
+          partnerID="p-buddytest"
+          stage="TESTING"
+          data={demodata}
+          theme={config.themeBase}
+          onUserEvent={config.userEvents}
+          onCustomMessage={config.handleCustomMessage}
+        />
     </div>
   );
 }
