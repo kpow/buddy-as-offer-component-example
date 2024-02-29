@@ -35,7 +35,7 @@ const OfferElement = ({selectedState, selectedPartner, companionMode}: {selected
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
-const stage = "TESTING";
+const stage = "STAGING";
 const checkState = (state: string) => {
     switch (state) {
         case "CA":
