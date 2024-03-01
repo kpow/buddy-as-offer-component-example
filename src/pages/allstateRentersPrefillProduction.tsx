@@ -116,7 +116,6 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
   // Once we have the configuration we return the Offer Component.
   return (
     <div className="App w-full">
-      {/* <div id="buddy_offer" /> */}
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-19g6ilex299lc"

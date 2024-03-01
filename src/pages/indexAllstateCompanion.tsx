@@ -49,8 +49,6 @@ function OfferElement() {
   return (
     <div className="App w-full">
       {/* The div the offer element loads into */}
-      {/* <h1>Allstate Companion ION loads here </h1> */}
-      {/* <div id="buddy_offer" /> */}
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-buddytest"

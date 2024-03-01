@@ -49,7 +49,6 @@ import Modal from '../components/modal';
   return (
     <div className="App w-full">
               {/* The div the offer element loads into */}
-              {/* <div id="buddy_offer" /> */}
                 <BuddyOfferElement
                   ion="ALLSTATE_RENTERS_PREFILL"
                   partnerID="p-buddytest"

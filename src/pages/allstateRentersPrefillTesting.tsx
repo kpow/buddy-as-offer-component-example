@@ -1,7 +1,7 @@
 'use client'
 // import the Buddy Offer Element and the useConfig hook
 import BuddyOfferElement, { useConfig } from '@buddy-technology/offer-component';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const initialData = {
   policy: {
@@ -129,7 +129,6 @@ const convertCompanionMode = (companionMode: string) => {
   // Once we have the configuration we return the Offer Component.
   return (
     <div className="App w-full">
-      {/* <div id="buddy_offer" /> */}
       <BuddyOfferElement
         ion="ALLSTATE_RENTERS_PREFILL"
         partnerID="p-buddytest"

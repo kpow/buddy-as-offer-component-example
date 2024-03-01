@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Staging from './allstateRentersPrefillTesting';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 declare global {
   interface Window {
@@ -15,24 +15,21 @@ const ParentComponent = () => {
 
   const handleStateChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedState(event.target.value);
-    //console.log('SelectedState', selectedState)
   };
   const handlePartnerChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedPartner(event.target.value);
-    //console.log('SelectedPartner', selectedPartner)
   };
   const handleCompanionModeChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setCompanionMode(event.target.value);
-    //console.log('companionMode', companionMode)
   };
   const handleRefresh = () => {window.location.reload()}
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-12">
       <div className="relative flex place-items-center w-full">
       <div className="App w-full text-center"> 
-      <Link href="/allstateCompanion">
+      {/* <Link href="/allstateCompanion">
         Go back
-      </Link>
+      </Link> */}
       <div>
         {selectedState === "" || selectedPartner === "" || companionMode === "" ? (
           <div className="relative inline-block text-center">
