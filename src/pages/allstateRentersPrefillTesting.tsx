@@ -16,7 +16,7 @@ const initialData = {
     }
   },
   customer: {
-    firstName: '',
+    firstName: 'Sally',
     lastName: 'James',
     dob: '04/04/1990',
     email: 'enterYourEmail@gmail.com',
@@ -99,10 +99,10 @@ const convertCompanionMode = (companionMode: string) => {
   const companionModeOverride = convertCompanionMode(companionMode)
   const [formData, setFormData] = useState({
     policy: {
-      // meta: {
-      //   partner: selectedPartner,
-      //   companionMode: companionModeOverride
-      // },
+      meta: {
+        partner: selectedPartner,
+        companionMode: companionModeOverride
+      },
       renters: {
         address: rentalAddress
       },
