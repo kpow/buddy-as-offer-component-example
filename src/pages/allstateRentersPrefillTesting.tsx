@@ -80,11 +80,18 @@ const checkState = (state: string) => {
             };
         default:
             return {
-                line1: '6613 Fairpark Ave',
-                line2: '',
-                postalCode: '45216',
-                state: state,
-                city: 'Cincinnati'
+                // line1: '6613 Fairpark Ave',
+                // line2: '',
+                // postalCode: '45216',
+                // state: state,
+                // city: 'Cincinnati'
+
+          line1: '8226 S Langley Ave', // 8226 S Langley Ave
+          line2: '',
+          postalCode: '60619',
+          state: 'IL',
+          city: 'Chicago' // Chicago
+
             };
     }
 };
