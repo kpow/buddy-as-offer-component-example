@@ -31,7 +31,7 @@ const ParentComponent = () => {
         Go back
       </Link> */}
       <div>
-        {selectedState === "" || selectedPartner === "" || companionMode === "" ? (
+        {selectedState === "" || selectedPartner === "" ? (
           <div className="relative inline-block text-center">
             <select onChange={handleStateChange} value={selectedState} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               {/* // appearance-none  */}
@@ -50,13 +50,14 @@ const ParentComponent = () => {
               <option value="Ballmart">Ballmart</option>
               <option value="Pinata">Pinata</option>
               <option value="Renew">Renew</option>
+              <option value="Buddy">Buddy (triggers ALLSTATE_HOSTED)</option>
             </select>
-            <br />
+            {/* <br />
             <select onChange={handleCompanionModeChange} value={companionMode} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               <option value="">Companion mode</option>
               <option value="True">On</option>
               <option value="False">Off</option>
-            </select>
+            </select> */}
           {/* <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
           </div> */}
@@ -64,7 +65,7 @@ const ParentComponent = () => {
         ) : null}
       </div>
 
-          {selectedState !== "" && selectedPartner !== "" && companionMode !== "" && <div className='text-white text-center p-4'>
+          {selectedState !== "" && selectedPartner !== "" && <div className='text-white text-center p-4'>
             <h3 className="text-lg font-semibold">Please refresh your browser to try another configuration</h3>
             <button className="mt-2 px-4 py-2 bg-allstate-blue hover:bg-blue-600 text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-300"
               onClick={handleRefresh}>
@@ -72,7 +73,8 @@ const ParentComponent = () => {
             </button>
           </div>}
 
-        {selectedState !== "" && selectedPartner !== "" && companionMode !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />}
+        {/* {selectedState !== "" && selectedPartner !== "" && companionMode !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />}*/}
+        {selectedState !== "" && selectedPartner !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />} 
         </div>
       </div>
     </main>

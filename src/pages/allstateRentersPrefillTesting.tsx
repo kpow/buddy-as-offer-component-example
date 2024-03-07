@@ -35,7 +35,7 @@ const OfferElement = ({selectedState, selectedPartner, companionMode}: {selected
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
-const stage = "STAGING";
+const stage = "TESTING";
 const checkState = (state: string) => {
     switch (state) {
         case "CA":
@@ -139,7 +139,8 @@ const convertCompanionMode = (companionMode: string) => {
         onCustomMessage={config.handleCustomMessage}
       />
       {selectedState !== 'other' ? (
-        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Partner: {selectedPartner} / Companion Mode: {companionMode} / Rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode} / Stage: {stage}</h1></div>
+        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Partner: {selectedPartner} / Rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode} / Stage: {stage}</h1></div>
+        // / Companion Mode: {companionMode} 
       ) : null}
     </div>
   );

@@ -9,23 +9,80 @@ import React, { useEffect, useState } from 'react';
 
 function OfferElement() {
   const router = useRouter()
-  const { id } = router.query;
-  console.log('id', id);
+  const { id, partner, state } = router.query;
+  console.log('id, partner, state', id, partner, state);
+  const checkState = (state: string) => {
+    switch (state) {
+        case "CA":
+            return {
+              line1: '3705 Haines St',
+                line2: '',
+                postalCode: '92109',
+                state: 'CA',
+                city: 'San Diego'
+            };
+        case "OH":
+            return {
+                line1: '6613 Fairpark Ave',
+                line2: '',
+                postalCode: '45216',
+                state: 'OH',
+                city: 'Cincinnati'
+            };
+        case "OK":
+            return {
+              line1: '625 Foss Dr',
+              line2: '',
+              postalCode: '73025',
+              state: 'OK',
+              city: 'Edmond'
+            };
+        case "SC":
+            return {
+                line1: '3505 Barkley Rd',
+                line2: '',
+                postalCode: '29154',
+                state: 'SC',
+                city: 'Sumter'
+            };
+        case "TN":
+            return {
+              line1: '4427 Deerland St',
+              line2: '',
+              postalCode: '38109',
+              state: 'TN',
+              city: 'Memphis'
+            };
+        default:
+            return {
+                line1: '6613 Fairpark Ave',
+                line2: '',
+                postalCode: '45216',
+                state: state,
+                city: 'Cincinnati'
+            };
+    }
+  };
+  const rentalAddress = checkState(state as string);
+  console.log('rentalAddress', rentalAddress);
   const demodata = {
     policy: {
       meta: {
-        partner: 'Buddy',
+        partner,
         companionMode: true
       },
       renters: {
-        address: {
-          line1: '3505 Barkley Rd',
-          line2: '',
-          postalCode: '29154',
-          state: 'SC',
-          city: 'Sumter'
-        }
-      }
+        address: rentalAddress
+      },
+      // renters: {
+      //   address: {
+      //     line1: '3505 Barkley Rd',
+      //     line2: '',
+      //     postalCode: '29154',
+      //     state: 'SC',
+      //     city: 'Sumter'
+      //   }
+      // }
     },
     customer: {
       firstName: 'Test',
