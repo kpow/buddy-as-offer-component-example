@@ -135,7 +135,7 @@ function OfferElement() {
   return (
     <div className="App w-full">
       {/* The div the offer element loads into */}
-      <h1>Allstate Companion ION loads here </h1>
+      <h1>Allstate Renters ION loads here in Companion Mode</h1>
       {/* <Link href="/">
         Go home
       </Link> */}
