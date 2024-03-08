@@ -12,6 +12,7 @@ const ParentComponent = () => {
   const [selectedState, setSelectedState] = useState('');
   const [selectedPartner, setSelectedPartner] = useState('');
   const [companionMode, setCompanionMode] = useState('');
+  const [selectedLastName, setSelectedLastName] = useState('');
 
   const handleStateChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedState(event.target.value);
@@ -22,6 +23,9 @@ const ParentComponent = () => {
   const handleCompanionModeChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setCompanionMode(event.target.value);
   };
+  const handleLastNameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+    setSelectedLastName(event.target.value);
+  };
   const handleRefresh = () => {window.location.reload()}
   return (
     <main className="flex min-h-screen flex-col items-center justify-between pt-12">
@@ -31,7 +35,7 @@ const ParentComponent = () => {
         Go back
       </Link> */}
       <div>
-        {selectedState === "" || selectedPartner === "" ? (
+        {selectedState === "" || selectedPartner === "" || selectedLastName === "" ? (
           <div className="relative inline-block text-center">
             <select onChange={handleStateChange} value={selectedState} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               {/* // appearance-none  */}
@@ -44,6 +48,12 @@ const ParentComponent = () => {
               <option value="other">Other state</option>
             </select>
             <br />
+            <select onChange={handleLastNameChange} value={selectedLastName} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
+              <option value="">Last Name</option>
+              <option value="Jones">Jones</option>
+              <option value="Jones 3rd">Jones 3rd</option>
+            </select>
+            <br />
             <select onChange={handlePartnerChange} value={selectedPartner} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               <option value="">Distribution partner</option>
               <option value="Avail">Avail</option>
@@ -52,6 +62,7 @@ const ParentComponent = () => {
               <option value="Renew">Renew</option>
               <option value="Buddy">Buddy (triggers ALLSTATE_HOSTED)</option>
             </select>
+
             {/* <br />
             <select onChange={handleCompanionModeChange} value={companionMode} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
               <option value="">Companion mode</option>
@@ -65,7 +76,7 @@ const ParentComponent = () => {
         ) : null}
       </div>
 
-          {selectedState !== "" && selectedPartner !== "" && <div className='text-white text-center p-4'>
+          {selectedState !== "" && selectedPartner !== "" && selectedLastName !== "" && <div className='text-white text-center p-4'>
             <h3 className="text-lg font-semibold">Please refresh your browser to try another configuration</h3>
             <button className="mt-2 px-4 py-2 bg-allstate-blue hover:bg-blue-600 text-white rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-blue-300"
               onClick={handleRefresh}>
@@ -74,7 +85,7 @@ const ParentComponent = () => {
           </div>}
 
         {/* {selectedState !== "" && selectedPartner !== "" && companionMode !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />}*/}
-        {selectedState !== "" && selectedPartner !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />} 
+        {selectedState !== "" && selectedPartner !== "" && selectedLastName !== "" && <Staging selectedState={selectedState} selectedPartner={selectedPartner} selectedLastName={selectedLastName} companionMode={companionMode} />} 
         </div>
       </div>
     </main>

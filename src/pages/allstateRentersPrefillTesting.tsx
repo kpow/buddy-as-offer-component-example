@@ -31,7 +31,7 @@ const initialData = {
   }
 };
 
-const OfferElement = ({selectedState, selectedPartner, companionMode}: {selectedState: string, selectedPartner: string, companionMode: string}) => {
+const OfferElement = ({selectedState, selectedPartner, companionMode, selectedLastName}: {selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string}) => {
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
@@ -116,7 +116,8 @@ const convertCompanionMode = (companionMode: string) => {
     },
     customer: {
       firstName: initialData.customer.firstName,
-      lastName: initialData.customer.lastName,
+      // lastName: initialData.customer.lastName,
+      lastName: selectedLastName,
       dob: initialData.customer.dob,
       email: initialData.customer.email,
       phone: initialData.customer.phone,
@@ -146,7 +147,7 @@ const convertCompanionMode = (companionMode: string) => {
         onCustomMessage={config.handleCustomMessage}
       />
       {selectedState !== 'other' ? (
-        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Partner: {selectedPartner} / Rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode} / Stage: {stage}</h1></div>
+        <div className="fixed inset-x-0 bottom-0 bg-allstate-blue text-white text-center py-2"><h1>Partner: {selectedPartner} / Last Name: {formData.customer.lastName} / Rental address: {formData.policy.renters.address.line1}, {formData.policy.renters.address.city}, {formData.policy.renters.address.state} {formData.policy.renters.address.postalCode} / Stage: {stage}</h1></div>
         // / Companion Mode: {companionMode} 
       ) : null}
     </div>
@@ -154,13 +155,13 @@ const convertCompanionMode = (companionMode: string) => {
 }
 
 
-export default function Staging({selectedState, selectedPartner, companionMode}: {selectedState: string, selectedPartner: string, companionMode: string}) {
+export default function Staging({selectedState, selectedPartner, companionMode, selectedLastName}: {selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string}) {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:w-auto mx:auto p-6 md:p-12">
       {/* <div className="relative flex place-items-center w-full"> */}
       <div className="w-full">
-        <OfferElement selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} />
+        <OfferElement selectedState={selectedState} selectedPartner={selectedPartner} companionMode={companionMode} selectedLastName={selectedLastName} />
       </div>
     </main>
   )
