@@ -67,11 +67,11 @@ function OfferElement() {
   // console.log('rentalAddress', rentalAddress);
   const demodata = {
     policy: {
-      // meta: {
-      //   // partner,
-      //   partner: 'Renew', // we are using partner: 'Buddy' to trigger ALLSTATE_HOSTED response from katib config in order to get to this page; HOWEVER we need to use a valid partner name in order to get the ION to load in companion mode;
-      //   companionMode: true
-      // },
+      meta: {
+        // partner,
+        partner: 'Renew', // we are using partner: 'Buddy' to trigger ALLSTATE_HOSTED response from katib config in order to get to this page; HOWEVER we need to use a valid partner name in order to get the ION to load in companion mode;
+        // companionMode: true
+      },
       renters: {
         address: {
           line1: '',
