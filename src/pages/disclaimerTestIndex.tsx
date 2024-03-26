@@ -47,7 +47,7 @@ OR */}
               <option value="">Select a state</option>
               <option value="AL">Alabama</option>
               <option value="ME">Maine</option>
-              <option value="MT">Montana</option>
+              <option value="MT">Missouri</option>
               <option value="NM">New Mexico</option>
               <option value="OR">Oregon</option>
               <option value="CA">California</option>
