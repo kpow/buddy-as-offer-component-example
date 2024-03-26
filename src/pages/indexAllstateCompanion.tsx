@@ -12,12 +12,19 @@ function OfferElement() {
         // companionMode: false
       },
       renters: {
-        address: {
-          line1: '3505 Barkley Rd',
+        // address: {
+        //   line1: '3505 Barkley Rd',
+        //   line2: '',
+        //   postalCode: '29154',
+        //   state: 'SC',
+        //   city: 'Sumter'
+        // }
+                address: {
+          line1: '3703 3rd St', // 3703 3rd St
           line2: '',
-          postalCode: '29154',
-          state: 'SC',
-          city: 'Sumter'
+          postalCode: '50313',
+          state: 'IA',
+          city: 'Des Moines' // Des Moines
         }
       }
     },

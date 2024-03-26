@@ -72,18 +72,25 @@ function OfferElement() {
         partner: 'Renew', // we are using partner: 'Buddy' to trigger ALLSTATE_HOSTED response from katib config in order to get to this page; HOWEVER we need to use a valid partner name in order to get the ION to load in companion mode;
         companionMode: true
       },
-      renters: {
-        address: rentalAddress
-      },
       // renters: {
-      //   address: {
-      //     line1: '3505 Barkley Rd',
-      //     line2: '',
-      //     postalCode: '29154',
-      //     state: 'SC',
-      //     city: 'Sumter'
-      //   }
-      // }
+      //   address: rentalAddress
+      // },
+      renters: {
+        // address: {
+        //   line1: '3505 Barkley Rd',
+        //   line2: '',
+        //   postalCode: '29154',
+        //   state: 'SC',
+        //   city: 'Sumter'
+        // }
+        address: {
+          line1: '3703 3rd St', // 3703 3rd St
+          line2: '',
+          postalCode: '50313',
+          state: 'IA',
+          city: 'Des Moines' // Des Moines
+        }
+      }
     },
     customer: {
       firstName: 'Test',
