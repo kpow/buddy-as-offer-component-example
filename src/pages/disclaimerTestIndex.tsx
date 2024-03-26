@@ -50,12 +50,12 @@ OR */}
               <option value="MT">Missouri</option>
               <option value="NM">New Mexico</option>
               <option value="OR">Oregon</option>
-              <option value="CA">California</option>
+              {/* <option value="CA">California</option> */}
               <option value="OH">Ohio</option>
               <option value="OK">Oklahoma</option>
               <option value="SC">South Carolina</option>
               <option value="TN">Tennessee</option>
-              <option value="other">Other state</option>
+              {/* <option value="other">Other state</option> */}
             </select>
             {/* <br />
             <select onChange={handleLastNameChange} value={selectedLastName} className="px-4 py-2 my-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none pr-10">
