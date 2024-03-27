@@ -46,6 +46,14 @@ const checkState = (state: string) => {
               state: 'AL',
               city: 'Foley'
           };
+        case "AR":
+          return {
+              line1: '2418 W 17th St',
+              line2: '',
+              postalCode: '72202',
+              state: 'AR',
+              city: 'Little Rock'
+          };
         case "CA":
             return {
               line1: '3705 Haines St',

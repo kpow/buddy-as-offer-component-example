@@ -46,6 +46,7 @@ NM
 OR */}
               <option value="">Select a state</option>
               <option value="AL">Alabama</option>
+              <option value="AR">Arkansas</option>
               <option value="ME">Maine</option>
               <option value="MT">Missouri</option>
               <option value="NM">New Mexico</option>
