@@ -46,6 +46,14 @@ const checkState = (state: string) => {
               state: 'AL',
               city: 'Foley'
           };
+          case "AZ":
+            return {
+              line1: '9032 E Karen Dr', // 9032 E Karen Dr
+                  line2: '',
+                  postalCode: '85260',
+                  state: 'AZ',
+                  city: 'Scottsdale' // Scottsdale
+            };  
         case "AR":
           return {
               line1: '2418 W 17th St',
@@ -61,6 +69,14 @@ const checkState = (state: string) => {
                 postalCode: '92109',
                 state: 'CA',
                 city: 'San Diego'
+            };
+        case "CO":
+            return {
+                 line1: '3600 N Garfield St', // 3600 N Garfield St
+          line2: 'Apt. 2 #45',
+          postalCode: '80205',
+          state: 'CO',
+          city: 'Denver' // Denver
             };
         case "OH":
             return {
