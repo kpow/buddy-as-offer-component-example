@@ -17,7 +17,7 @@ const initialData = {
   },
   customer: {
     firstName: 'Mouse',
-    lastName: 'Mickey',
+    lastName: 'Mickey 3',
     dob: '04/04/1990',
     email: 'Pfuen@allstate.com',
     phone: '+13103477028',
