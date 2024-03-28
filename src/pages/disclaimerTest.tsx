@@ -157,7 +157,7 @@ const convertCompanionMode = (companionMode: string) => {
       meta: {
         partner: selectedPartner,
         companionMode: companionModeOverride,
-        testMode: '0607'
+        testMode: ''
       },
       renters: {
         address: rentalAddress

@@ -38,6 +38,14 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
   const stage = "PRODUCTION";
   const checkState = (state: string) => {
     switch (state) {
+      case "AL": 
+          return {
+              line1: '904 Shagbark Rd',
+              line2: '',
+              postalCode: '36535',
+              state: 'AL',
+              city: 'Foley'
+          };
         case "OH":
             return {
                 line1: '6613 Fairpark Ave',
