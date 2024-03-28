@@ -31,60 +31,60 @@ const initialData = {
   }
 };
 
-const OfferElement = ({selectedState, selectedPartner, companionMode, selectedLastName}: {selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string}) => {
+const OfferElement = ({ selectedState, selectedPartner, companionMode, selectedLastName }: { selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string }) => {
   const { config, isLoading } = useConfig(
     "https://staging.embed.buddy.insure/allstate/renters/allstate-renters-prefill-config-react.js"
   );
-const stage = "TESTING";
-const checkState = (state: string) => {
+  const stage = "STAGING";
+  const checkState = (state: string) => {
     switch (state) {
-        case "CA":
-            return {
-              line1: '3705 Haines St',
-                line2: '',
-                postalCode: '92109',
-                state: 'CA',
-                city: 'San Diego'
-            };
-        case "OH":
-            return {
-                line1: '6613 Fairpark Ave',
-                line2: '',
-                postalCode: '45216',
-                state: 'OH',
-                city: 'Cincinnati'
-            };
-        case "OK":
-            return {
-              line1: '625 Foss Dr',
-              line2: '',
-              postalCode: '73025',
-              state: 'OK',
-              city: 'Edmond'
-            };
-        case "SC":
-            return {
-                line1: '3505 Barkley Rd',
-                line2: '',
-                postalCode: '29154',
-                state: 'SC',
-                city: 'Sumter'
-            };
-        case "TN":
-            return {
-              line1: '4427 Deerland St',
-              line2: '',
-              postalCode: '38109',
-              state: 'TN',
-              city: 'Memphis'
-            };
-        default:
-            return {
-                // line1: '6613 Fairpark Ave',
-                // line2: '',
-                // postalCode: '45216',
-                // state: state,
-                // city: 'Cincinnati'
+      case "CA":
+        return {
+          line1: '3705 Haines St',
+          line2: '',
+          postalCode: '92109',
+          state: 'CA',
+          city: 'San Diego'
+        };
+      case "OH":
+        return {
+          line1: '6613 Fairpark Ave',
+          line2: '',
+          postalCode: '45216',
+          state: 'OH',
+          city: 'Cincinnati'
+        };
+      case "OK":
+        return {
+          line1: '625 Foss Dr',
+          line2: '',
+          postalCode: '73025',
+          state: 'OK',
+          city: 'Edmond'
+        };
+      case "SC":
+        return {
+          line1: '3505 Barkley Rd',
+          line2: '',
+          postalCode: '29154',
+          state: 'SC',
+          city: 'Sumter'
+        };
+      case "TN":
+        return {
+          line1: '4427 Deerland St',
+          line2: '',
+          postalCode: '38109',
+          state: 'TN',
+          city: 'Memphis'
+        };
+      default:
+        return {
+          // line1: '6613 Fairpark Ave',
+          // line2: '',
+          // postalCode: '45216',
+          // state: state,
+          // city: 'Cincinnati'
 
           line1: '8226 S Langley Ave', // 8226 S Langley Ave
           line2: '',
@@ -92,16 +92,16 @@ const checkState = (state: string) => {
           state: 'IL',
           city: 'Chicago' // Chicago
 
-            };
+        };
     }
-};
-const convertCompanionMode = (companionMode: string) => {
-  if (companionMode === 'True') {
-    return true;
-  } else {
-    return false;
+  };
+  const convertCompanionMode = (companionMode: string) => {
+    if (companionMode === 'True') {
+      return true;
+    } else {
+      return false;
+    }
   }
-}
   const rentalAddress = checkState(selectedState);
   const companionModeOverride = convertCompanionMode(companionMode)
   const [formData, setFormData] = useState({
@@ -155,7 +155,7 @@ const convertCompanionMode = (companionMode: string) => {
 }
 
 
-export default function Staging({selectedState, selectedPartner, companionMode, selectedLastName}: {selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string}) {
+export default function Staging({ selectedState, selectedPartner, companionMode, selectedLastName }: { selectedState: string, selectedPartner: string, companionMode: string, selectedLastName: string }) {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between md:w-auto mx:auto p-6 md:p-12">
