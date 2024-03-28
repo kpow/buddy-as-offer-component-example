@@ -92,7 +92,7 @@ const OfferElement = ({ selectedState }: { selectedState: string }) => {
   const [formData, setFormData] = useState({
     policy: {
       meta: {
-        partner: 'Pinata',
+        partner: 'Renew',
         companionMode: false, // site of implementation should have this parameter passed in automatically - set to 'TRUE' if we want to immediately trigger quickQuote once data has been decrypted
       },
       renters: {
