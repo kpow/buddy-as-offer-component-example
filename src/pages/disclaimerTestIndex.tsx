@@ -49,16 +49,26 @@ OR */}
               <option value="AR">Arkansas</option>
               <option value="AZ">Arizona</option>
               <option value="CO">Colorado</option>
+              <option value="DE">Delaware</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
               <option value="ME">Maine</option>
               <option value="MO">Missouri</option>
+              <option value="MS">Mississippi</option>
               <option value="MT">Montana</option>
               <option value="NM">New Mexico</option>
+              <option value="ND">North Dakota</option>
               <option value="OR">Oregon</option>
               {/* <option value="CA">California</option> */}
               <option value="OH">Ohio</option>
               <option value="OK">Oklahoma</option>
+              <option value="PA">Pennsylvania</option>
               <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
               <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="WI">Wisconsin</option>
               {/* <option value="other">Other state</option> */}
             </select>
             {/* <br />

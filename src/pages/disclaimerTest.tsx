@@ -72,11 +72,35 @@ const checkState = (state: string) => {
             };
         case "CO":
             return {
-                 line1: '3600 N Garfield St', // 3600 N Garfield St
+                 line1: '3600 N Garfield St',
           line2: 'Apt. 2 #45',
           postalCode: '80205',
           state: 'CO',
-          city: 'Denver' // Denver
+          city: 'Denver'
+            };
+        case "DE":
+              return {
+                   line1: '361 New London Rd',
+            line2: '',
+            postalCode: '19711',
+            state: 'DE',
+            city: 'Newark'
+              };
+        case "IL": 
+          return {
+              line1: '8226 S Langley Ave',
+            line2: '',
+            postalCode: '60619',
+            state: 'IL',
+            city: 'Chicago'
+          };
+        case "IN":
+            return {
+                 line1: '2839 N Talbott St',
+          line2: 'Apt 3',
+          postalCode: '46205',
+          state: 'IN',
+          city: 'Indianapolis'
             };
         case "OH":
             return {
@@ -104,12 +128,20 @@ const checkState = (state: string) => {
           };
           case "MO":
             return {
-                 line1: '3195 W Montclair St', // 3195 W Montclair St
+                 line1: '3195 W Montclair St',
           line2: '',
           postalCode: '65807',
           state: 'MO',
-          city: 'Springfield' // Springfield
+          city: 'Springfield'
             };
+        case "MS":
+          return {
+            line1: '1701 Fox Chase Rd',
+          line2: '',
+          postalCode: '38834',
+          state: 'MS',
+          city: 'Corinth'
+          }
         case "MT":
             return {
               line1: '169 Arcadia Ln',
@@ -118,6 +150,14 @@ const checkState = (state: string) => {
               state: 'MT',
               city: 'Bozeman'
             };
+        case "ND":
+              return {
+                line1: '362 9th Ave S',
+                line2: '',
+                postalCode: '58012',
+                state: 'ND',
+                city: 'Casselton'
+              };        
         case "NM":
             return {
               line1: '8420 Tierra Morena Pl NE',
@@ -134,6 +174,14 @@ const checkState = (state: string) => {
                   state: 'OR',
                   city: 'Portland'
               };
+        case "PA":
+                return {
+                    line1: '1858 Main St',
+                    line2: '',
+                    postalCode: '15412',
+                    state: 'PA',
+                    city: 'Allenport'
+                };
         case "SC":
             return {
                 line1: '3505 Barkley Rd',
@@ -142,6 +190,15 @@ const checkState = (state: string) => {
                 state: 'SC',
                 city: 'Sumter'
             };
+        case "SD":
+          return {
+            line1: '828 N Indiana Ave',
+            line2: '',
+            postalCode: '5805710312',
+            state: 'SD',
+            city: 'Sioux Falls'
+          };
+          
         case "TN":
             return {
               line1: '4427 Deerland St',
@@ -150,6 +207,29 @@ const checkState = (state: string) => {
               state: 'TN',
               city: 'Memphis'
             };
+            case "TX":
+              return {
+                  line1: '5956 Hopkins Dr',
+          line2: '',
+          postalCode: '76227',
+          state: 'TX',
+              };
+        case "UT":
+          return {  
+            line1: '1860 Lucky John Dr',
+            line2: '',
+            postalCode: '84060',
+            state: 'UT',
+            city: 'Park City'
+          };
+          case "WI":
+            return {  
+                 line1: '618 Milky Way',
+          line2: '',
+          postalCode: '53718',
+          state: 'WI',
+          city: 'Madison'
+            }
         default:
             return {
                 // line1: '6613 Fairpark Ave',
