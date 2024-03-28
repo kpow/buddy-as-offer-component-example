@@ -86,6 +86,14 @@ const checkState = (state: string) => {
             state: 'ME',
             city: 'Bangor'
           };
+          case "MO":
+            return {
+                 line1: '3195 W Montclair St', // 3195 W Montclair St
+          line2: '',
+          postalCode: '65807',
+          state: 'MO',
+          city: 'Springfield' // Springfield
+            };
         case "MT":
             return {
               line1: '169 Arcadia Ln',
@@ -157,7 +165,7 @@ const convertCompanionMode = (companionMode: string) => {
       meta: {
         partner: selectedPartner,
         companionMode: companionModeOverride,
-        testMode: ''
+        testMode: '0607'
       },
       renters: {
         address: rentalAddress
